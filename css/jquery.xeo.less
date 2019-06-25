@@ -1,0 +1,47 @@
+@import "lesshat";
+
+@color: #295253;
+@font-face {
+    font-family: 'Economica';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Economica'), local('Economica-Regular'), url(../fonts/Economica.woff) format('woff');
+}
+
+.xeo-menu {
+    margin: 0;
+    width: 140px;
+    list-style: none;
+    position: absolute;
+    padding: 0;
+
+    li {
+        position: relative;
+        left: -120px;
+        margin: 5px;
+        list-style: none;
+        display: block;
+
+        background: @color;
+        .transition(background 0.5s);
+
+        &:hover {
+            background: darken(@color, 20%);
+        }
+
+        a {
+            display: block;
+            padding: 8px 10px;
+            color: lighten(@color, 40%);
+            font-family: Economica, san-serif;
+            text-decoration: none;
+            .drop-shadow();
+        }
+
+        &.active {
+            left: 0;
+        }
+
+    }
+
+}

@@ -1,0 +1,38 @@
+@font-face {
+  font-family: 'Economica';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Economica'), local('Economica-Regular'), url(../fonts/Economica.woff) format('woff');
+}
+.xeo-menu {
+  margin: 0;
+  width: 140px;
+  list-style: none;
+  position: absolute;
+  padding: 0;
+}
+.xeo-menu li {
+  position: relative;
+  left: -120px;
+  margin: 5px;
+  list-style: none;
+  display: block;
+  background: #295253;
+  -webkit-transition: background 0.5s;
+  -moz-transition: background 0.5s;
+  -o-transition: background 0.5s;
+  transition: background 0.5s;
+}
+.xeo-menu li:hover {
+  background: #070f0f;
+}
+.xeo-menu li a {
+  display: block;
+  padding: 8px 10px;
+  color: #85c1c3;
+  font-family: Economica, san-serif;
+  text-decoration: none;
+}
+.xeo-menu li.active {
+  left: 0;
+}
